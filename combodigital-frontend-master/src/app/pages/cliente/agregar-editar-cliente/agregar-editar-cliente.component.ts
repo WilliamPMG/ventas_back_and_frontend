@@ -6,7 +6,7 @@ import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms
 import { MensajeService } from 'src/app/services/mensaje.service';
 import { ClienteService } from 'src/app/services/cliente.service';
 
-//componente se encarga de agregar y editar el cliente
+//componente se encarga de agregar y editar el cliente tambien observaciones
 @Component({
   selector: 'app-agregar-editar-cliente',
   templateUrl: './agregar-editar-cliente.component.html',
