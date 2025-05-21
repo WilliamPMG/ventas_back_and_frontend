@@ -5,11 +5,22 @@
     </div>
     <div class="row">
         <div class="col-sm-3" *ngFor="let cliente of clientes">
+            <p-card header="{{cliente.nombre}} {{cliente.apellido}}"> 
+                <p>
+                    <a href="https://api.whatsapp.com/send?phone=57{{cliente.telefono}}" target="_blank"><img src="assets/whatsapp.png" width="30px"  alt=""></a>
+                </p>
+                <ng-template pTemplate="footer">
+                    <div class="flex gap-3 mt-1">
+                        <p-button label="Cancel" severity="secondary" class="w-full" styleClass="w-full" />
+                        <p-button label="Save" class="w-full" styleClass="w-full" />
+                    </div>
+                </ng-template>
+            </p-card>
             <div class="card mb-2">
                 <div class="card-body">
-                    <h5 class="card-title">{{cliente.nombre}} {{cliente.apellido}}</h5>
+                    
                     <h6 class="card-subtitle mb-2 text-muted">{{cliente.telefono}}
-                        <a href="https://api.whatsapp.com/send?phone=57{{cliente.telefono}}" target="_blank"><img src="assets/whatsapp.png" width="30px" alt=""></a>
+                        
                     </h6>
                     <a class="card-link me-5 text-decoration-none" [routerLink]="['/cliente-suscripciones/'+cliente.id]">Ver suscripciones</a>
                     <button class="btn btn-primary mt-3 me-2" routerLink="/editar-cliente/{{cliente.id}}">Editar</button>

@@ -17,6 +17,9 @@ import { GananciasComponent } from './pages/ganancias/ganancias.component';
 import { HttpClientModule } from '@angular/common/http';
 import { VencidasComponent } from './pages/suscripcion/vencidas/vencidas.component';
 import { BuscadorSuscripcionesComponent } from './pages/suscripcion/buscador-suscripciones/buscador-suscripciones.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,9 @@ import { BuscadorSuscripcionesComponent } from './pages/suscripcion/buscador-sus
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    CardModule,
+    ButtonModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
